@@ -29,4 +29,22 @@ if (!fs.existsSync("./assets")) {
         }
         console.log("created successfully")
     })
+} else {
+    fs.rmdir("./assets", (err) => {
+        if (err){
+            console.log(err)
+        }
+        console.log("Folder Deleted!")
+    })
+}
+
+// delete
+
+if(fs.existsSync("./docs/del.txt")) {
+    fs.unlink("./docs/del.txt", (err) => {
+        if (err) {
+            console.log(err)
+        }
+        console.log("File Deleted")
+    })
 }
