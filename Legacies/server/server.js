@@ -38,11 +38,12 @@ const server = http.createServer((req, res) => {
             res.statusCode = 404
             break 
     }
-    // res.write('<head><link rel = "stylesheet" href = "#"></head>')
-    // res.write("<p>Hello, yarodomo </p>")
-    // res.write("<p> Hello, Kaido </p>")
+    
+    res.write('<head><link rel = "stylesheet" href = "#"></head>')
+    res.write("<p>Hello, yarodomo </p>")
+    res.write("<p> Hello, Kaido </p>")
 
-    // res.end()
+    res.end()
 
     fs.readFile(path, (err, data) => {
         if(err) {
